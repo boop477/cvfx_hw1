@@ -51,6 +51,11 @@
 3. Target Image的顔色分佈特徵將應用在Source Image上。
 
 #### Result:
+
+* **Real photo**
+<br>![](https://i.imgur.com/OW1uF5g.jpg)<br>
+
+* **Photo to Monet**
 <br>![](https://i.imgur.com/TtTXUWO.jpg)<br>
 *Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
 
