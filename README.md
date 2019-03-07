@@ -56,6 +56,9 @@
 ![](https://i.imgur.com/wDeKlMh.jpg)
 *Left*: Source paintings. *Middle*: Target images. *Right*: Results  with histogram equalization on R, G, and B channels.
 
+![](https://i.imgur.com/OW1uF5g.jpg)
+
+
 
 ---
 
