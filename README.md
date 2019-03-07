@@ -41,7 +41,7 @@
 ### Histogram Equalization on RGB space
 &emsp;&emsp;histogram equalization（直方圖均化）是一種圖像增强方式。我們以灰階圖片為範例，取得灰階圖片的累積分布函數（CDF），把原本集中在某區塊的機率函數(PDF)平均分布在所有顏色上面，達到增加圖片的對比度的效果。
 ![](https://i.imgur.com/EVM5MmV.png)
-![](https://i.imgur.com/STMmlJl.png)
+<br>![](https://i.imgur.com/STMmlJl.png)
 <br>&emsp;&emsp;在image color transfer中，我們可以利用提取Target image的RGB三通道的累積分布函數（CDF），來對Source Image進行histogram equalization（直方圖均化），以達到將Source image的顔色分佈特徵轉化為Target image的顔色分佈特徵，從而實現image color transfer.
 
 #### Steps:
@@ -215,7 +215,7 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     我們也測試Monet to Photo的效果，不過選用了其他畫家的作品來做測試。
     ##### 米勒(Millet)
     ![Alt Text](https://media.giphy.com/media/37q1LhM3pMkeiVOIfb/giphy.gif)
-    *Left* : Painting → Photo. *Right* : Painting.
+    <br>*Left* : Painting → Photo. *Right* : Painting.
     
     米勒表現手法和莫內不同，風格偏向寫實。不論前期或是後期生成的圖片都在變化整體色調
     ##### 雷諾瓦(Renoir)
