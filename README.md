@@ -50,11 +50,13 @@
 3. Target Image的顔色分佈特徵將應用在Source Image上。
 
 #### Result:
-![](https://i.imgur.com/TtTXUWO.jpg)
-<br>*Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
+* **Real photo**
+<br>![](https://i.imgur.com/pwNnXWs.jpg)<br>
 
-![](https://i.imgur.com/wDeKlMh.jpg)
-<br>*Left*: Source paintings. *Middle*: Target images. *Right*: Results  with histogram equalization on R, G, and B channels.
+* **Photo to Monet**
+<br>![](https://i.imgur.com/TtTXUWO.jpg)<br>
+*Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
+
 
 
 ---
@@ -77,6 +79,7 @@
 
 
 <br>*Left*: Source images. *Middle*: Target real photograph. *Right*: Results  with histogram matching on R, G, and B channels.
+
 * **Photo to Monet**
 ![](https://i.imgur.com/A42czSl.jpg)
 ![](https://i.imgur.com/IKuWiLy.jpg)
@@ -248,8 +251,8 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 ---
     
 ### Reference
-[1] E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley. Color transfer between images. IEEE Computer Graphics and Ap- plications, 21:34–41, 2001.
-[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.
+[1] E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley. Color transfer between images. IEEE Computer Graphics and Ap- plications, 21:34–41, 2001.<br>
+[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.<br>
 [3] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. CoRR, abs/1703.10593, 2017.
 
 
