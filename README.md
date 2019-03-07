@@ -40,8 +40,8 @@
 ---
 ### Histogram Equalization on RGB space
 &emsp;&emsp;histogram equalization（直方圖均化）是一種圖像增强方式。我們以灰階圖片為範例，取得灰階圖片的累積分布函數（CDF），把原本集中在某區塊的機率函數(PDF)平均分布在所有顏色上面，達到增加圖片的對比度的效果。
-![](https://i.imgur.com/EVM5MmV.png)
-![](https://i.imgur.com/STMmlJl.png)
+![](https://i.imgur.com/EVM5MmV.png)</br>
+![](https://i.imgur.com/STMmlJl.png)</br>
 &emsp;&emsp;在image color transfer中，我們可以利用提取Target image的RGB三通道的累積分布函數（CDF），來對Source Image進行histogram equalization（直方圖均化），以達到將Source image的顔色分佈特徵轉化為Target image的顔色分佈特徵，從而實現image color transfer.
 
 #### Steps:
@@ -149,10 +149,10 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 我們跑了160 iterations.
 ![](https://i.imgur.com/dubYzNE.jpg)
 
-* **Photo to Monet**
-    ![Alt Text](https://media.giphy.com/media/oHxVAEVT1UWl6aKsGJ/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/YWbwRFT9yzIKl5uemH/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/wsWUEcP6q0PXS3sLcy/giphy.gif)
+* **Photo to Monet**</br>
+    ![Alt Text](https://media.giphy.com/media/oHxVAEVT1UWl6aKsGJ/giphy.gif)</br>
+    ![Alt Text](https://media.giphy.com/media/YWbwRFT9yzIKl5uemH/giphy.gif)</br>
+    ![Alt Text](https://media.giphy.com/media/wsWUEcP6q0PXS3sLcy/giphy.gif)</br>
     *Left* : Photo → Monet. *Right* : Photo.
     
     我們比較Monet to Photo在不同iteration的效果
@@ -176,7 +176,7 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 * **Monet to Photo**
     ![Alt Text](https://media.giphy.com/media/3Foz71Mh6IMOzjBzRB/giphy.gif)
     ![Alt Text](https://media.giphy.com/media/1NXFxgF2D5Fl3kMnrf/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/pVZRrZhlVO200JzDDn/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/pVZRrZhlVO200JzDDn/giphy.gif)</br>
     *Left* : Monet → Photo. *Right* : Photo.
     
     我們比較Monet to Photo在不同iteration的效果
@@ -206,7 +206,7 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     我們也使用自己拍攝的照片測試結果，挑選和莫內的畫有相似的取景以及內容的相片來測試。
     ![Alt Text](https://media.giphy.com/media/PQb9RWoMFH0tE1zJFG/giphy.gif)
     ![Alt Text](https://media.giphy.com/media/7TkSVM4JwLwwTx6UOy/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/vL7tRZlKvuaKFMPDAW/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/vL7tRZlKvuaKFMPDAW/giphy.gif)</br>
     *Left* : Photo → Monet. *Right* : Photo.
     
     三張照片的內容是樹和倒影(110th iteration)、夕陽(160th iteration)以及睡蓮(160th iteration)。
@@ -217,13 +217,13 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     
     我們也測試Monet to Photo的效果，不過選用了其他畫家的作品來做測試。
     ##### 米勒(Millet)
-    ![Alt Text](https://media.giphy.com/media/37q1LhM3pMkeiVOIfb/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/37q1LhM3pMkeiVOIfb/giphy.gif)</br>
     *Left* : Painting → Photo. *Right* : Painting.
     
     米勒表現手法和莫內不同，風格偏向寫實。不論前期或是後期生成的圖片都在變化整體色調
     ##### 雷諾瓦(Renoir)
     ![Alt Text](https://media.giphy.com/media/1wPBn9e49es8ZYh400/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/3JuBfnVX8JnjL4tiGk/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/3JuBfnVX8JnjL4tiGk/giphy.gif)</br>
     *Left* : Painting → Photo. *Right* : Painting.
     
     雷諾瓦和莫內畫風相似，同樣是印象派的領導人物。
@@ -235,7 +235,7 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 
     ##### 布丹(Eugène Boudin)
     ![Alt Text](https://media.giphy.com/media/9xyGHahdX7Nl2eqPRW/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/QNVQnratVHMQqTaH1x/giphy.gif)
+    ![Alt Text](https://media.giphy.com/media/QNVQnratVHMQqTaH1x/giphy.gif)</br>
     *Left* : Painting → Photo. *Right* : Painting.
     
     布丹的風格介於沈穩寫實的米勒和強調光影的莫內之間，不過轉換後的效果並不是很明顯。
