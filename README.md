@@ -249,7 +249,7 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     
 ### Reference
 [1] E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley. Color transfer between images. IEEE Computer Graphics and Ap- plications, 21:34–41, 2001.
-[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.
-[3] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. CoRR, abs/1703.10593, 2017.
+<br>[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.
+<br>[3] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. CoRR, abs/1703.10593, 2017.
 
 
