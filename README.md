@@ -54,9 +54,6 @@
 <br>![](https://i.imgur.com/TtTXUWO.jpg)<br>
 *Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
 
-<br>![](https://i.imgur.com/wDeKlMh.jpg)<br>
-*Left*: Source paintings. *Middle*: Target images. *Right*: Results  with histogram equalization on R, G, and B channels.
-
 ---
 ### Histogram Matching
 &emsp;&emsp;Histogram Matching是以累積分布函數（CDF）來建立新舊亮度色彩分佈的對應關係，或對不同圖像進行比較建立對應關係。也正是這一特性，我們可以通過Histogram Matching來將一張圖像（Target Image）的色彩分佈（color distribution）應用在另一張圖像上（Source Image），實現color transfer。
