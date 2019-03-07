@@ -189,7 +189,8 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     <br>![](https://i.imgur.com/iG8h6w3.png)<br>
     
 * **Other photos and paintings**
-    我們也使用自己拍攝的照片測試結果，挑選和莫內的畫有相似的取景以及內容的相片來測試。
+
+    我們使用自己拍攝，和莫內的畫有相似的取景以及內容的相片來測試。
     <br>![Alt Text](https://media.giphy.com/media/PQb9RWoMFH0tE1zJFG/giphy.gif)<br>
     ![Alt Text](https://media.giphy.com/media/7TkSVM4JwLwwTx6UOy/giphy.gif)<br>
     ![Alt Text](https://media.giphy.com/media/vL7tRZlKvuaKFMPDAW/giphy.gif)<br>
