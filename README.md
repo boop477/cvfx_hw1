@@ -9,17 +9,17 @@
 1. 取得Target Image與Source Image的RGB值。
 2. RGB space->LMS space。因為lαβ space是LMS cone space轉變來的，所以先將RGB space圖像轉變為LMS space。包含以下兩個步驟：
 * &emsp;&ensp;RGB space->XYZ tristimulus values
-&ensp;![](https://i.imgur.com/kSAInLC.png)
+<br>&ensp;![](https://i.imgur.com/kSAInLC.png)
 * &emsp;&ensp;XYZ tristimulus values->LMS space
-&emsp;![](https://i.imgur.com/zH8wIwC.png)
+<br>&emsp;![](https://i.imgur.com/zH8wIwC.png)
 3. 分別對LMS取以10為底的對數，得到相對應的**L&nbsp;M&nbsp;S**。
-&emsp;&emsp;![](https://i.imgur.com/Ue2Wf1T.png)
+<br>&emsp;&emsp;![](https://i.imgur.com/Ue2Wf1T.png)
 4. LMS space->lαβ color space.
-&emsp;![](https://i.imgur.com/3Whv0yH.png)
+<br>&emsp;![](https://i.imgur.com/3Whv0yH.png)
 5. 用統計學的方法來進行顏色校正。
 * 分別求出l、α、β各自的平均值(<>)和標準差(σ)。
 * Source Image中l、α、β減去各自的均值，並乘上Target Image與Source Image的比值，得到如下公式l'、α'、β'的值。
-&emsp;&ensp;![](https://i.imgur.com/ir7uNi7.png)&emsp;&emsp;![](https://i.imgur.com/inkmYEr.png)
+<br>&emsp;&ensp;![](https://i.imgur.com/ir7uNi7.png)&emsp;&emsp;![](https://i.imgur.com/inkmYEr.png)
 * 再加上Target Image中l、α、β的均值。
 6. lαβ space->LMS space->RGB space.將Step5最後得到的結果通過step4、2的對應的反矩陣計算轉回XYZ color space。
 
@@ -42,7 +42,7 @@
 &emsp;&emsp;histogram equalization（直方圖均化）是一種圖像增强方式。我們以灰階圖片為範例，取得灰階圖片的累積分布函數（CDF），把原本集中在某區塊的機率函數(PDF)平均分布在所有顏色上面，達到增加圖片的對比度的效果。
 ![](https://i.imgur.com/EVM5MmV.png)
 ![](https://i.imgur.com/STMmlJl.png)
-&emsp;&emsp;在image color transfer中，我們可以利用提取Target image的RGB三通道的累積分布函數（CDF），來對Source Image進行histogram equalization（直方圖均化），以達到將Source image的顔色分佈特徵轉化為Target image的顔色分佈特徵，從而實現image color transfer.
+<br>&emsp;&emsp;在image color transfer中，我們可以利用提取Target image的RGB三通道的累積分布函數（CDF），來對Source Image進行histogram equalization（直方圖均化），以達到將Source image的顔色分佈特徵轉化為Target image的顔色分佈特徵，從而實現image color transfer.
 
 #### Steps:
 1. 取得Target Image與Source Image的RGB三通道累積分布函數（CDF）。
@@ -51,10 +51,10 @@
 
 #### Result:
 ![](https://i.imgur.com/TtTXUWO.jpg)
-*Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
+<br>*Left*: Source images. *Middle*: Target paintings. *Right*: Results  with histogram equalization on R, G, and B channels.
 
 ![](https://i.imgur.com/wDeKlMh.jpg)
-*Left*: Source paintings. *Middle*: Target images. *Right*: Results  with histogram equalization on R, G, and B channels.
+<br>*Left*: Source paintings. *Middle*: Target images. *Right*: Results  with histogram equalization on R, G, and B channels.
 
 
 ---
@@ -69,20 +69,20 @@
 3. 將得出的重新映射(mapping))數組應用在Source Image上。
 
 #### Result:
-* **Real photo**
+* **Real photo**<br>
 ![](https://i.imgur.com/ZiRhu3f.png)
 ![](https://i.imgur.com/Y7bIqa2.png)
 ![](https://i.imgur.com/L45EKHy.png)
 ![](https://i.imgur.com/8H5mhzU.png)
 
 
-*Left*: Source images. *Middle*: Target real photograph. *Right*: Results  with histogram matching on R, G, and B channels.
+<br>*Left*: Source images. *Middle*: Target real photograph. *Right*: Results  with histogram matching on R, G, and B channels.
 * **Photo to Monet**
 ![](https://i.imgur.com/A42czSl.jpg)
 ![](https://i.imgur.com/IKuWiLy.jpg)
 ![](https://i.imgur.com/r3qVjsp.jpg)
 
-*Left*: Source paintings. *Middle*: Target paintings. *Right*: Results  with histogram matching on R, G, and B channels.
+<br>*Left*: Source paintings. *Middle*: Target paintings. *Right*: Results  with histogram matching on R, G, and B channels.
 
 &emsp;&emsp;我們可以看到通過Histogram Equalization或Histogram Matching之後Source Image的color distribution與Target Image靠近了許多，兩張圖的顔色分佈特徵已經十分靠近，雖然兩種方法本質不盡相同，但是過於基礎的演算法在transfer的質量上的反應都并不優質。Real photo的color transfer過於生硬甚至有輕微色偏，Photo to Monet中油畫的感覺并不突出，這兩種方法的作用主要的還是體現在基礎的color distribution transfer之中。
 
@@ -111,33 +111,33 @@
 
 ![](https://i.imgur.com/PlSDGLf.jpg)
 
-&emsp;&emsp;Original Image是因為雲太厚、方向沒有正對太陽升起的地方而沒看到的日出。
-&emsp;&emsp;Target Image是高美濕地的日落。
-&emsp;&emsp;Result Image合成出來有海邊晚霞的感覺。
-&emsp;&emsp;將兩張圖片分別迭代1次、5次和10次的結果如上圖所示。可以看出迭代次數越多，Target Image的色彩轉移到Original Image上就越豐富，但是同時隨著迭代次數的增加，圖片的顆粒感加重，並在圖片上方中間產生些許破碎感。
+<br>&emsp;&emsp;Original Image是因為雲太厚、方向沒有正對太陽升起的地方而沒看到的日出。
+<br>&emsp;&emsp;Target Image是高美濕地的日落。
+<br>&emsp;&emsp;Result Image合成出來有海邊晚霞的感覺。
+<br>&emsp;&emsp;將兩張圖片分別迭代1次、5次和10次的結果如上圖所示。可以看出迭代次數越多，Target Image的色彩轉移到Original Image上就越豐富，但是同時隨著迭代次數的增加，圖片的顆粒感加重，並在圖片上方中間產生些許破碎感。
 
 * **Photo to Monet**
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![](https://i.imgur.com/xxovc68.png)
-&emsp;&emsp;用莫內風格的畫對於真實照片進行處理，可以很明顯看出處理後的照片邊緣銳化，部分處理得有些失真，但對於色彩鮮艷對比度高的照片處理後和莫內風格還是有些許相似。
+<br>&emsp;&emsp;用莫內風格的畫對於真實照片進行處理，可以很明顯看出處理後的照片邊緣銳化，部分處理得有些失真，但對於色彩鮮艷對比度高的照片處理後和莫內風格還是有些許相似。
 
 
 ---
 
 ### CycleGAN
 &emsp;&emsp;CycleGAN使用Neural Network做color transfer。CycyeGAN使用一組Generator生成兩個domain的圖片，以及一組Discriminator分辨真實圖片和生成圖片。
-![](https://i.imgur.com/IW9NOYj.jpg)
+<br>![](https://i.imgur.com/IW9NOYj.jpg)<br>
 Generator `G` 將domain `X` 的圖片生成對應到domain `Y` 的圖片；Generator `F` 將domain `Y` 的圖片生成對應到domain `X` 的圖片；Discriminator `D_x` 分辨domain `X`圖片的真偽；Discriminator `D_y` 分辨domain `Y`圖片的真偽 。
 
 CycleGAN在training時期需要training data，因此在測試圖片時是轉換成在training時期學到所有圖片的色調，和前面提到可以指定單張target image的color transfer方法有所不同。
 
 #### Steps :
 1. Train generators and discriminators by minimizing the loss function
-    ![](https://i.imgur.com/DdhtJ7a.jpg)
+    <br>![](https://i.imgur.com/DdhtJ7a.jpg)<br>
     which consists of adversarial loss
-    ![](https://i.imgur.com/2BBPCDu.jpg)
+    <br>![](https://i.imgur.com/2BBPCDu.jpg)<br>
     and cycle consistency loss.
-    ![](https://i.imgur.com/PeCFt1f.jpg)
+    <br>![](https://i.imgur.com/PeCFt1f.jpg)<br>
     
 2. Use generator `G` to transfer images of domain `X` to domain `Y`; use generator `F` to transfer images of domain `Y` to domain `X`.
 
@@ -147,10 +147,10 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 ![](https://i.imgur.com/dubYzNE.jpg)
 
 * **Photo to Monet**
-    ![Alt Text](https://media.giphy.com/media/oHxVAEVT1UWl6aKsGJ/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/YWbwRFT9yzIKl5uemH/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/wsWUEcP6q0PXS3sLcy/giphy.gif)
-    *Left* : Photo → Monet. *Right* : Photo.
+    <br>![Alt Text](https://media.giphy.com/media/oHxVAEVT1UWl6aKsGJ/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/YWbwRFT9yzIKl5uemH/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/wsWUEcP6q0PXS3sLcy/giphy.gif)
+    <br>*Left* : Photo → Monet. *Right* : Photo.
     
     我們比較Monet to Photo在不同iteration的效果
     
@@ -171,10 +171,10 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 
     
 * **Monet to Photo**
-    ![Alt Text](https://media.giphy.com/media/3Foz71Mh6IMOzjBzRB/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/1NXFxgF2D5Fl3kMnrf/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/pVZRrZhlVO200JzDDn/giphy.gif)
-    *Left* : Monet → Photo. *Right* : Photo.
+    <br>![Alt Text](https://media.giphy.com/media/3Foz71Mh6IMOzjBzRB/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/1NXFxgF2D5Fl3kMnrf/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/pVZRrZhlVO200JzDDn/giphy.gif)
+    <br>*Left* : Monet → Photo. *Right* : Photo.
     
     我們比較Monet to Photo在不同iteration的效果
     
@@ -200,11 +200,11 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     ![](https://i.imgur.com/iG8h6w3.png)
     
 * **Other photos and paintings**
-    我們也使用自己拍攝的照片測試結果，挑選和莫內的畫有相似的取景以及內容的相片來測試。
-    ![Alt Text](https://media.giphy.com/media/PQb9RWoMFH0tE1zJFG/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/7TkSVM4JwLwwTx6UOy/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/vL7tRZlKvuaKFMPDAW/giphy.gif)
-    *Left* : Photo → Monet. *Right* : Photo.
+    <br>我們也使用自己拍攝的照片測試結果，挑選和莫內的畫有相似的取景以及內容的相片來測試。
+    <br>![Alt Text](https://media.giphy.com/media/PQb9RWoMFH0tE1zJFG/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/7TkSVM4JwLwwTx6UOy/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/vL7tRZlKvuaKFMPDAW/giphy.gif)
+    <br>*Left* : Photo → Monet. *Right* : Photo.
     
     三張照片的內容是樹和倒影(110th iteration)、夕陽(160th iteration)以及睡蓮(160th iteration)。
     
@@ -219,9 +219,9 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     
     米勒表現手法和莫內不同，風格偏向寫實。不論前期或是後期生成的圖片都在變化整體色調
     ##### 雷諾瓦(Renoir)
-    ![Alt Text](https://media.giphy.com/media/1wPBn9e49es8ZYh400/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/3JuBfnVX8JnjL4tiGk/giphy.gif)
-    *Left* : Painting → Photo. *Right* : Painting.
+    <br>![Alt Text](https://media.giphy.com/media/1wPBn9e49es8ZYh400/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/3JuBfnVX8JnjL4tiGk/giphy.gif)
+    <br>*Left* : Painting → Photo. *Right* : Painting.
     
     雷諾瓦和莫內畫風相似，同樣是印象派的領導人物。
     
@@ -231,9 +231,9 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
     150th iteration生成出的照片比較有立體感，整體色調比50th iteration更像自然影像，遠方的天空也能處理得比較平滑。
 
     ##### 布丹(Eugène Boudin)
-    ![Alt Text](https://media.giphy.com/media/9xyGHahdX7Nl2eqPRW/giphy.gif)
-    ![Alt Text](https://media.giphy.com/media/QNVQnratVHMQqTaH1x/giphy.gif)
-    *Left* : Painting → Photo. *Right* : Painting.
+    <br>![Alt Text](https://media.giphy.com/media/9xyGHahdX7Nl2eqPRW/giphy.gif)
+    <br>![Alt Text](https://media.giphy.com/media/QNVQnratVHMQqTaH1x/giphy.gif)
+    <br>*Left* : Painting → Photo. *Right* : Painting.
     
     布丹的風格介於沈穩寫實的米勒和強調光影的莫內之間，不過轉換後的效果並不是很明顯。
     
