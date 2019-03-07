@@ -31,7 +31,7 @@
 
 * **Photo to Monet**
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![](https://i.imgur.com/D0AQ8Gn.png=500x500)
+![](https://i.imgur.com/D0AQ8Gn.png=500x500)<br>
 
 &emsp;&emsp;當莫內的畫的風格轉移到真實照片上時，可以看到莫內風格的畫在色彩的表達上比較明艷，最後僅顏色的飽和度有很明顯的提升，但油畫感並不強烈。
 
@@ -121,7 +121,7 @@
 
 * **Photo to Monet**
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;![](https://i.imgur.com/xxovc68.png)
+![](https://i.imgur.com/xxovc68.png)
 <br>&emsp;&emsp;用莫內風格的畫對於真實照片進行處理，可以很明顯看出處理後的照片邊緣銳化，部分處理得有些失真，但對於色彩鮮艷對比度高的照片處理後和莫內風格還是有些許相似。
 
 
@@ -251,8 +251,8 @@ CycleGAN在training時期需要training data，因此在測試圖片時是轉換
 ---
     
 ### Reference
-[1] E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley. Color transfer between images. IEEE Computer Graphics and Ap- plications, 21:34–41, 2001.<br>
-[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.<br>
-[3] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. CoRR, abs/1703.10593, 2017.
+[1] E. Reinhard, M. Ashikhmin, B. Gooch, and P. Shirley. Color transfer between images. IEEE Computer Graphics and Ap- plications, 21:34–41, 2001.
+<br>[2] F. Pitie ́, A. Kokaram, R. Dahyot, N-Dimensional probability density function transfer and its application to colour transfer, in: Interna- tional Conference on Computer Vision (ICCV’05), Beijing, 2005.
+<br>[3] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A. Efros. Unpaired image-to-image translation using cycle-consistent adversarial networks. CoRR, abs/1703.10593, 2017.
 
 
